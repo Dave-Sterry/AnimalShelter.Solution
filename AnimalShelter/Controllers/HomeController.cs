@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-// using ProjectName.Models; <<change
+using AnimalShelter.Models;
 using System.Collections.Generic;
 
-namespace ProjectName.Controllers //change
+namespace AnimalShelter.Controllers
 {
     public class HomeController : Controller //main page/splash page
     {

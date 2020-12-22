@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
-// using ProjectName.Models; <<change
+using AnimalShelter.Models;
 using System.Collections.Generic;
 
-namespace ProjectName.Controllers//change
+namespace AnimalShelter.Controllers
 {
-    public class ChildClassNameController : Controller
+    public class AnimalsController : Controller
     {
 
         // [HttpGet("/categories/{categoryId}/items/new")]//user creates the ChildObject example:Item in category. Category: Housework == Item:Mop the floors

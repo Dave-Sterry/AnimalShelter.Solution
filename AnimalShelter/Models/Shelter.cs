@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-namespace ProjectName.Models
+namespace AnimalShelter.Models
 {
-    public class ParentClassName
+    public class Shelter
     {
         //public string getter and setters
     }

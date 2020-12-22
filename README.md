@@ -1,10 +1,10 @@
-# Application Name
+# AnimalShelter
 
 <div align="center">
 <img src="https://github.com/agatakolohe.png" width="200px" height="auto" >
 </div>
-<p align="center">Description of application, date-2020</p>
-<p align="center"> By Agata Kolodziej</p>
+<p align="center">AnimalShelter, 12-22-2020</p>
+<p align="center"> By Agata Kolodziej & David Sterry</p>
 
 ## Description
 
@@ -84,4 +84,4 @@ If any errors or bugs occur with installation delete both bin and obj folders an
 
 This software is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
 
-Copyright (c) 2020 Agata Kolodziej
+Copyright (c) 2020 Agata Kolodziej & David Sterry
