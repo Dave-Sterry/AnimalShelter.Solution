@@ -8,7 +8,12 @@
 
 ## Description
 
-Purpose usage, detailed explanation what is does and any other information you want users and other developers to have
+update our db to have gender, date of admittance and breed
+in form add those properties
+in details add those properties to display
+
+list animals by type
+list aniamls that have been in the shelter the longest
 
 ## Specifications
 
