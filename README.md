@@ -1,9 +1,11 @@
-# AnimalShelter
+# Animal Shelter Database
 
 <div align="center">
 <img src="https://github.com/agatakolohe.png" width="200px" height="auto" >
+<img src="https://github.com/Dave-Sterry.png" width="200px" height="auto" >
+
 </div>
-<p align="center">AnimalShelter, 12-22-2020</p>
+<p align="center">Animal Shelter using Database Basics with Entity, 12-22-2020</p>
 <p align="center"> By Agata Kolodziej & David Sterry</p>
 
 ## Description

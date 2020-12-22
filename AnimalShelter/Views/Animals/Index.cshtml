@@ -3,6 +3,7 @@
 }
 @using AnimalShelter.Models;
 @model List<AnimalShelter.Models.Animal>;
+@* @model AnimalShelter.Models.Animal; *@
 
 <h1>Animals</h1>
 
@@ -14,7 +15,9 @@
 <ul>
     @foreach (Animal animal in Model)
     {
-        <li>@Html.ActionLink($"{animal.AnimalName}", "Details", new { id = animal.AnimalId}) </li>
+        @* <h3>@Html.DisplayNameFor(model => model.AnimalType): @Html.DisplayFor(model => model.AnimalType)</h3> *@
+        @* <li>@Html.DisplayNameFor($"{AnimalType}") : @Html.DisplayFor($"{animal.AnimalType}")</li> *@
+        <li> @animal.AnimalType : @Html.ActionLink($"{animal.AnimalName}", "Details", new { id = animal.AnimalId}) </li>
     }
 </ul>
 
