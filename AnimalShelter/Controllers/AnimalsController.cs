@@ -1,34 +1,44 @@
 using Microsoft.AspNetCore.Mvc;
 using AnimalShelter.Models;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AnimalShelter.Controllers
 {
     public class AnimalsController : Controller
     {
+        private readonly AnimalShelterContext _db;
 
-        // [HttpGet("/categories/{categoryId}/items/new")]//user creates the ChildObject example:Item in category. Category: Housework == Item:Mop the floors
-        // public ActionResult New(int categoryId)
-        // {
-        //     Category category = Category.Find(categoryId);
-        //     return View(category);
-        // }
+        public AnimalsController(AnimalShelterContext db)
+        {
+            _db = db;
+        }
 
-        // [HttpPost("/items/delete")] //deleting 
-        // public ActionResult DeleteAll()
-        // {
-        //     Item.ClearAll();
-        //     return View();
-        // }
-        // [HttpGet("/categories/{categoryId}/items/{itemId}")] //show both object
-        // public ActionResult Show(int categoryId, int itemId)
-        // {
-        //     Item item = Item.Find(itemId);
-        //     Category category = Category.Find(categoryId);
-        //     Dictionary<string, object> model = new Dictionary<string, object>();
-        //     model.Add("item", item);
-        //     model.Add("category", category);
-        //     return View(model);
-        // }
+        public ActionResult Index()
+        {
+            List<Animal> model = _db.Animals.ToList();
+            return View(model);
+        }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Animal animal)
+        {
+            _db.Animals.Add(animal);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Details(int id)
+        {
+            Animal thisAnimal = _db.Animals.FirstOrDefault(animals => animals.AnimalId == id);
+            return View(thisAnimal);
+        }
+
+
     }
 }
