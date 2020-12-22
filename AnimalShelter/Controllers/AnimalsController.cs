@@ -16,7 +16,7 @@ namespace AnimalShelter.Controllers
 
         public ActionResult Index()
         {
-            List<Animal> model = _db.Animals.OrderBy(animal => animal.AnimalType).ToList();
+            List<Animal> model = _db.Animals.OrderBy(animal => animal.IntakeDate).ToList();
             return View(model);
         }
 
@@ -28,6 +28,7 @@ namespace AnimalShelter.Controllers
         [HttpPost]
         public ActionResult Create(Animal animal)
         {
+            // animal.InputIntakeDate();
             _db.Animals.Add(animal);
             _db.SaveChanges();
             return RedirectToAction("Index");

@@ -17,8 +17,12 @@
     {
         @* <h3>@Html.DisplayNameFor(model => model.AnimalType): @Html.DisplayFor(model => model.AnimalType)</h3> *@
         @* <li>@Html.DisplayNameFor($"{AnimalType}") : @Html.DisplayFor($"{animal.AnimalType}")</li> *@
-        <li> @animal.AnimalType : @Html.ActionLink($"{animal.AnimalName}", "Details", new { id = animal.AnimalId}) </li>
+        <li> @animal.AnimalType : @Html.ActionLink($"{animal.AnimalName}", "Details", new { id =
+        animal.AnimalId}) <br> Intake Date: @animal.IntakeDate </li>
     }
 </ul>
 
 <p>@Html.ActionLink("Add a new animal", "Create")</p>
+
+
+@* @Html.TextBoxFor(m => m.MyDate, new { Value = Model.MyDate.ToString("DD:MM:YYYY")}); *@

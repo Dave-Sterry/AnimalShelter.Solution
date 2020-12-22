@@ -11,6 +11,8 @@
     @Html.TextBoxFor(model => model.AnimalType)
     @Html.LabelFor(model => model.AnimalName)
     @Html.TextBoxFor(model => model.AnimalName)
+    @Html.LabelFor(model => model.IntakeDate)
+    @Html.TextBoxFor(model => model.IntakeDate, new { @type = "date"})
     <input type="submit" value="Add new animal" />
 }
 
